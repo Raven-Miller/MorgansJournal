@@ -4,7 +4,7 @@
     "gh-pages": "^6.3.0"
   },
   "scripts": {
-    "deploy": "gh-pages -d _site -r https://x-access-token:${GITHUB_TOKEN}@github.com/raven-miller/MorgansJournal.git",
+    "deploy": "gh-pages -d _site",
     "build": "eleventy",
     "start": "eleventy --serve"
   }
