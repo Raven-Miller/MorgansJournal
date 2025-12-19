@@ -1,0 +1,24 @@
+---
+title: "Stuff"
+layout: base.njk
+permalink: "/Journals/{{ title | slug }}/"
+tab: "Stuff"
+---
+
+<h2>Stuff</h2>
+<p>
+  This is just random stuff. Little bits of information, things I want to keep
+  track of, etc.
+</p>
+
+<div class="collection">
+  {% for page in collections.Stuff %}
+  <div class="collection-item">
+    <a href="{{ page.url | url }}">
+      <p>{{ page.data.title }}</p>
+      <p>{{ page.data.fakeDate }}</p>
+      <p class="des">{{ page.data.des }}</p>
+    </a>
+  </div>
+  {% endfor %}
+</div>

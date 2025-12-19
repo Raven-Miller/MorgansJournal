@@ -1,0 +1,38 @@
+---
+title: "Personal"
+layout: base.njk
+permalink: "/Journals/{{ title | slug }}/"
+tab: "Personal"
+---
+
+<div class="pp-container" id="ppContainer">
+  <div class="password-pop">
+    <button id="hintButton" onclick="getHint()">?</button>
+    <p>Please Enter Password</p>
+    <input type="text" id="inputPassword" />
+    <button type="submit" id="SubmitBtn">Enter</button>
+    <p id="hint">
+      Hint: ... .... . .-. .-.. --- -.-. -.- / .... --- .-.. -- . ... / .- ..- -
+      .... --- .-. ... / ... - .- .-. / ... .. --. -.
+    </p>
+  </div>
+</div>
+
+<h2>Personal</h2>
+<p>These are my personal thoughts and feelings written down.</p>
+
+<div class="collection">
+  {% for page in collections.Personal %}
+  <div class="collection-item">
+    <a href="{{ page.url | url }}">
+      <p>{{ page.data.title }}</p>
+      <p>{{ page.data.fakeDate }}</p>
+      <p class="des">{{ page.data.des }}</p>
+    </a>
+  </div>
+  {% endfor %}
+</div>
+
+<script>
+  const correctPassword = "gemini";
+</script>

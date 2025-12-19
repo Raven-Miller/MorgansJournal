@@ -6,6 +6,7 @@
   "scripts": {
     "deploy": "gh-pages -d _site",
     "build": "eleventy",
-    "start": "eleventy --serve"
+    "start": "eleventy --serve",
+    "type": "module"
   }
 }

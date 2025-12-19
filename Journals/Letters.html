@@ -1,0 +1,36 @@
+---
+title: "Letters"
+layout: base.njk
+permalink: "/Journals/{{ title | slug }}/"
+tab: "Letters"
+---
+
+<div class="pp-container" id="ppContainer">
+  <div class="password-pop">
+    <button id="hintButton" onclick="getHint()">?</button>
+    <p>Please Enter Password</p>
+    <input type="text" id="inputPassword" />
+    <button type="submit" id="SubmitBtn">Enter</button>
+    <p id="hint">
+      Hint: tahW raey saw drofxO tliub?
+    </p>
+  </div>
+  </div>
+
+  <h2>Letters</h2>
+  <p>These are letters that I probably won't ever send. But that's okay.</p>
+
+  <div class="collection">
+    {% for page in collections.Letters %}
+    <div class="collection-item">
+      <a href="{{ page.url | url }}">
+        <p>{{ page.data.title }}</p>
+        <p>{{ page.data.fakeDate }}</p>
+        <p class="des">{{ page.data.des }}</p>
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<script> const correctPassword = "1096"; </script>
